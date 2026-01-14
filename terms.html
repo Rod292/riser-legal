@@ -1,162 +1,591 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Riser</title>
+    <title>Riser - Conditions Generales d'Utilisation</title>
     <style>
+        :root {
+            --bg-dark: #0D0D12;
+            --surface: #1A1A24;
+            --surface-light: #252532;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0A8;
+            --accent: #FF6B35;
+            --accent-purple: #9B5DE5;
+            --warning: #F59E0B;
+            --info: #3B82F6;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: #0f0f23;
-            color: #e0e0e8;
+            background: var(--bg-dark);
+            color: var(--text-primary);
             line-height: 1.7;
             padding: 40px 20px;
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
         }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
         h1 {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 700;
             margin-bottom: 8px;
-            background: linear-gradient(135deg, #ff6b35, #f7c59f);
+            background: linear-gradient(135deg, #FF6B35, #9B5DE5);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .last-updated {
-            color: #808090;
+
+        .subtitle {
+            color: var(--text-secondary);
             font-size: 14px;
-            margin-bottom: 40px;
         }
+
+        .nav-links {
+            margin-top: 16px;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            margin: 0 12px;
+            padding: 8px 16px;
+            background: var(--surface);
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .nav-links a.active {
+            background: var(--accent);
+            color: white;
+        }
+
         h2 {
-            font-size: 24px;
-            color: #ff6b35;
+            font-size: 20px;
+            font-weight: 600;
             margin-top: 32px;
             margin-bottom: 16px;
+            color: var(--accent);
         }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
         p {
+            color: var(--text-secondary);
             margin-bottom: 16px;
-            color: #c0c0d0;
         }
-        ul {
+
+        ul, ol {
+            color: var(--text-secondary);
             margin-bottom: 16px;
             padding-left: 24px;
         }
+
         li {
             margin-bottom: 8px;
-            color: #c0c0d0;
         }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .card.warning {
+            border-left: 4px solid var(--warning);
+        }
+
+        .card.important {
+            border-left: 4px solid var(--accent);
+        }
+
+        .card.info {
+            border-left: 4px solid var(--info);
+        }
+
+        .card.ai {
+            border-left: 4px solid var(--accent-purple);
+        }
+
+        .definition {
+            background: var(--surface-light);
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .definition-term {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 107, 53, 0.2);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
         a {
-            color: #ff6b35;
+            color: var(--accent);
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 32px;
-            font-size: 14px;
+
+        .lang-notice {
+            background: var(--surface);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--surface-light);
+        }
+
+        th {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        td {
+            color: var(--text-secondary);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <header>
+            <div class="logo">🌅</div>
+            <h1>Riser - Mentions Legales</h1>
+            <p class="subtitle">Derniere mise a jour : 12 janvier 2025</p>
+            <div class="nav-links">
+                <a href="privacy.html">Politique de Confidentialite</a>
+                <a href="terms.html" class="active">CGU</a>
+            </div>
+        </header>
 
-        <h1>Terms of Service</h1>
-        <p class="last-updated">Last updated: January 14, 2025</p>
+        <div class="lang-notice">
+            <strong>Langue de reference :</strong> En cas de divergence entre les versions, la version francaise des presentes CGU prevaut.<br>
+            <em>Reference language: In case of discrepancy, the French version of these Terms shall prevail.</em>
+        </div>
 
-        <p>Welcome to Riser. By using our application, you agree to these Terms of Service. Please read them carefully.</p>
+        <main>
+            <div class="card">
+                <h2 style="margin-top: 0;">Conditions Generales d'Utilisation (CGU)</h2>
+                <p>Bienvenue sur Riser. Les presentes Conditions Generales d'Utilisation (« CGU » ou « Conditions ») regissent votre acces et utilisation de l'application mobile Riser et des services associes.</p>
+                <p><strong>En telechargeant, installant ou utilisant Riser, vous acceptez d'etre lie par les presentes CGU et notre <a href="privacy.html">Politique de Confidentialite</a>.</strong></p>
+            </div>
 
-        <h2>1. Acceptance of Terms</h2>
-        <p>By downloading, installing, or using Riser, you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the application.</p>
+            <!-- DEFINITIONS -->
+            <h2>Article 1 - Definitions</h2>
+            <p>Les termes suivants ont la signification indiquee ci-dessous :</p>
 
-        <h2>2. Description of Service</h2>
-        <p>Riser is a wake-up call application that delivers AI-generated personalized wake-up calls via VoIP push notifications. The service includes:</p>
-        <ul>
-            <li>Customizable alarm scheduling</li>
-            <li>AI-generated wake-up messages</li>
-            <li>Task and habit tracking</li>
-            <li>Calendar and reminders integration</li>
-        </ul>
+            <div class="definition">
+                <span class="definition-term">« Service »</span> : L'application mobile Riser, ses fonctionnalites, l'infrastructure cloud associee, et tout service connexe fourni par l'Editeur.
+            </div>
+            <div class="definition">
+                <span class="definition-term">« Editeur » / « Nous »</span> : Le proprietaire et operateur de Riser, joignable a l'adresse arodestudio@gmail.com.
+            </div>
+            <div class="definition">
+                <span class="definition-term">« Utilisateur » / « Vous »</span> : Toute personne physique utilisant le Service.
+            </div>
+            <div class="definition">
+                <span class="definition-term">« Compte »</span> : L'espace personnel cree lors de l'inscription via Sign in with Apple, permettant d'acceder aux fonctionnalites du Service.
+            </div>
+            <div class="definition">
+                <span class="definition-term">« Contenu Utilisateur »</span> : Toute donnee saisie par l'Utilisateur : taches, habitudes, parametres d'alarme, labels, preferences.
+            </div>
+            <div class="definition">
+                <span class="definition-term">« Contenu IA »</span> : Messages de reveil, textes et audio generes automatiquement par les systemes d'intelligence artificielle integres au Service.
+            </div>
+            <div class="definition">
+                <span class="definition-term">« Abonnement Premium »</span> : Acces payant a des fonctionnalites avancees du Service, le cas echeant.
+            </div>
 
-        <h2>3. Account Registration</h2>
-        <p>To use Riser, you must sign in with your Apple ID. You are responsible for maintaining the security of your account and for all activities that occur under your account.</p>
+            <!-- OBJET ET ACCEPTATION -->
+            <h2>Article 2 - Objet et Acceptation</h2>
+            <h3>2.1 Objet</h3>
+            <p>Le Service Riser est une application de reveil intelligent qui propose :</p>
+            <ul>
+                <li>Des appels de reveil personnalises generes par intelligence artificielle</li>
+                <li>Un suivi des taches et habitudes avec recap matinal</li>
+                <li>Une integration calendrier pour des messages contextuels</li>
+                <li>Plusieurs styles de reveil et preferences vocales</li>
+            </ul>
 
-        <h2>4. Subscription and Payments</h2>
-        <p>Riser offers premium features through subscription plans:</p>
-        <ul>
-            <li>Subscriptions are billed through your Apple ID account</li>
-            <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period</li>
-            <li>You can manage and cancel subscriptions in your App Store account settings</li>
-            <li>Refunds are handled according to Apple's refund policy</li>
-        </ul>
+            <h3>2.2 Acceptation</h3>
+            <p>L'utilisation du Service implique l'acceptation pleine et entiere des presentes CGU. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le Service.</p>
 
-        <h2>5. Free Trial</h2>
-        <p>We may offer a free trial period. If you do not cancel before the trial ends, you will be automatically charged for the subscription plan you selected.</p>
+            <h3>2.3 Capacite</h3>
+            <p>Vous devez avoir au moins <strong>13 ans</strong> pour utiliser Riser. En utilisant le Service, vous declarez remplir cette condition d'age. Les mineurs de 13 a 18 ans doivent avoir l'autorisation d'un parent ou tuteur legal.</p>
 
-        <h2>6. Acceptable Use</h2>
-        <p>You agree not to:</p>
-        <ul>
-            <li>Use the service for any illegal purpose</li>
-            <li>Attempt to gain unauthorized access to our systems</li>
-            <li>Interfere with or disrupt the service</li>
-            <li>Reverse engineer or attempt to extract the source code</li>
-            <li>Use the service to harass, abuse, or harm others</li>
-        </ul>
+            <!-- COMPTE UTILISATEUR -->
+            <h2>Article 3 - Compte Utilisateur</h2>
+            <h3>3.1 Creation de Compte</h3>
+            <p>L'inscription s'effectue exclusivement via <strong>Sign in with Apple</strong>. Vous etes responsable de la securite de votre identifiant Apple et de toutes les activites effectuees depuis votre Compte.</p>
 
-        <h2>7. AI-Generated Content</h2>
-        <p>Wake-up messages are generated by artificial intelligence. While we strive to provide helpful and appropriate content:</p>
-        <ul>
-            <li>We do not guarantee the accuracy or appropriateness of AI-generated content</li>
-            <li>AI responses may occasionally be unexpected or imperfect</li>
-            <li>You can adjust the tone and style of messages in your preferences</li>
-        </ul>
+            <h3>3.2 Exactitude des Informations</h3>
+            <p>Vous vous engagez a fournir des informations exactes et a les maintenir a jour.</p>
 
-        <h2>8. Service Availability</h2>
-        <p>We strive to maintain reliable service, but we do not guarantee:</p>
-        <ul>
-            <li>Uninterrupted or error-free service</li>
-            <li>That alarms will always trigger exactly on time</li>
-            <li>Availability of AI voice generation at all times</li>
-        </ul>
-        <p>The app includes fallback mechanisms (local notifications, text-to-speech) to maximize reliability.</p>
+            <h3>3.3 Un Compte par Personne</h3>
+            <p>Chaque personne ne peut detenir qu'un seul Compte. La creation de comptes multiples pour abuser des fonctionnalites gratuites est interdite.</p>
 
-        <h2>9. Intellectual Property</h2>
-        <p>Riser and its original content, features, and functionality are owned by us and are protected by international copyright, trademark, and other intellectual property laws.</p>
+            <!-- CONFIDENTIALITE ET DONNEES -->
+            <div class="card info">
+                <h2 style="margin-top: 0;">Article 4 - Confidentialite et Donnees Personnelles</h2>
+                <p>La collecte et le traitement de vos donnees personnelles sont regis par notre <strong><a href="privacy.html">Politique de Confidentialite</a></strong>, qui fait partie integrante des presentes CGU.</p>
 
-        <h2>10. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
-        <ul>
-            <li>Lost profits or revenue</li>
-            <li>Loss of data</li>
-            <li>Missed alarms or wake-up calls</li>
-            <li>Any damages resulting from your use or inability to use the service</li>
-        </ul>
+                <h3>4.1 Resume des Donnees Collectees</h3>
+                <table>
+                    <tr>
+                        <th>Categorie</th>
+                        <th>Exemples</th>
+                        <th>Finalite</th>
+                    </tr>
+                    <tr>
+                        <td>Identite</td>
+                        <td>Apple ID, nom, email (optionnel)</td>
+                        <td>Authentification</td>
+                    </tr>
+                    <tr>
+                        <td>Preferences</td>
+                        <td>Style de reveil, langue, voix</td>
+                        <td>Personnalisation IA</td>
+                    </tr>
+                    <tr>
+                        <td>Contenu</td>
+                        <td>Taches, habitudes, alarmes</td>
+                        <td>Fonctionnement du Service</td>
+                    </tr>
+                    <tr>
+                        <td>Technique</td>
+                        <td>Token VoIP, fuseau horaire</td>
+                        <td>Livraison des appels</td>
+                    </tr>
+                </table>
 
-        <h2>11. Disclaimer of Warranties</h2>
-        <p>The service is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+                <h3>4.2 Services Tiers IA</h3>
+                <p>Le Service utilise des API tierces (Google Gemini, Fish Audio) pour generer le Contenu IA. Les donnees transmises sont limitees au strict necessaire et ne comprennent pas vos informations d'identification personnelle. Consultez la Section 2 de notre Politique de Confidentialite pour plus de details.</p>
+            </div>
 
-        <h2>12. Termination</h2>
-        <p>We may terminate or suspend your access to the service immediately, without prior notice, for any reason, including breach of these Terms. You may delete your account at any time through the app settings.</p>
+            <!-- LICENCE ET UTILISATION -->
+            <h2>Article 5 - Licence d'Utilisation</h2>
+            <h3>5.1 Licence Accordee</h3>
+            <p>Nous vous accordons une licence <strong>personnelle, non exclusive, non transferable, revocable et limitee</strong> d'utilisation du Service pour vos besoins personnels non commerciaux, sous reserve du respect des presentes CGU.</p>
 
-        <h2>13. Changes to Terms</h2>
-        <p>We reserve the right to modify these terms at any time. We will notify users of significant changes through the app or by email. Continued use of the service after changes constitutes acceptance of the new terms.</p>
+            <h3>5.2 Restrictions</h3>
+            <p>Vous vous engagez a NE PAS :</p>
+            <ul>
+                <li>Copier, modifier, distribuer ou creer des oeuvres derivees du Service</li>
+                <li>Desassembler, decompiler ou faire de l'ingenierie inverse sur le Service</li>
+                <li>Utiliser des robots, scrapers ou outils automatises pour acceder au Service</li>
+                <li>Contourner les mesures de securite ou limitations techniques</li>
+                <li>Encadrer (framing) ou integrer le Service dans d'autres applications</li>
+                <li>Utiliser le Service a des fins illegales ou prejudiciables</li>
+                <li>Revendre, louer ou commercialiser le Service ou le Contenu IA</li>
+                <li>Manipuler les systemes IA pour generer du contenu nuisible, offensant ou illegal</li>
+                <li>Surcharger intentionnellement l'infrastructure du Service</li>
+            </ul>
 
-        <h2>14. Governing Law</h2>
-        <p>These Terms shall be governed by and construed in accordance with the laws of France, without regard to its conflict of law provisions.</p>
+            <h3>5.3 Revocation</h3>
+            <p>Cette licence est automatiquement revoquee en cas de violation des presentes CGU, sans preavis ni indemnite.</p>
 
-        <h2>15. Contact Us</h2>
-        <p>If you have any questions about these Terms of Service, please contact us at:</p>
-        <p><a href="mailto:arodestudio@gmail.com">arodestudio@gmail.com</a></p>
+            <!-- CONTENU IA -->
+            <div class="card warning">
+                <h2 style="margin-top: 0;">Article 6 - Contenu Genere par Intelligence Artificielle</h2>
+
+                <h3>6.1 Nature du Contenu IA</h3>
+                <p>Les messages de reveil sont generes automatiquement par des systemes d'intelligence artificielle (Google Gemini pour le texte, Fish Audio pour la voix). Ce contenu est cree de maniere algorithmique et n'est pas redige ni valide par des humains.</p>
+
+                <h3>6.2 Exclusion de Garantie IA</h3>
+                <p><strong>LE CONTENU IA EST FOURNI « EN L'ETAT » SANS GARANTIE D'AUCUNE SORTE.</strong> Nous ne garantissons pas que le Contenu IA sera :</p>
+                <ul>
+                    <li>Exact, complet ou a jour</li>
+                    <li>Adapte a vos besoins specifiques</li>
+                    <li>Exempt d'erreurs, inexactitudes ou contenus inappropries</li>
+                    <li>Conforme a vos attentes ou preferences</li>
+                </ul>
+
+                <h3>6.3 Pas de Conseil Professionnel</h3>
+                <p>Le Contenu IA est fourni a des fins de <strong>motivation et divertissement uniquement</strong>. Il ne constitue en aucun cas un conseil medical, psychologique, juridique ou professionnel. Ne prenez pas de decisions importantes basees sur le Contenu IA.</p>
+
+                <h3>6.4 Assomption des Risques</h3>
+                <p>En utilisant les fonctionnalites IA du Service, vous acceptez et assumez tous les risques lies au Contenu IA, y compris la possibilite de contenus inattendus, imprecis ou potentiellement offensants.</p>
+
+                <h3>6.5 Propriete du Contenu IA</h3>
+                <p>Le Contenu IA genere pour votre usage personnel vous est concede sous licence. Vous ne pouvez pas le commercialiser, le redistribuer a grande echelle ou le presenter comme etant d'origine humaine.</p>
+            </div>
+
+            <!-- PROPRIETE INTELLECTUELLE -->
+            <h2>Article 7 - Propriete Intellectuelle</h2>
+            <h3>7.1 Droits de l'Editeur</h3>
+            <p>Le Service, incluant son design, code source, fonctionnalites, marques, logos et documentation, est la propriete exclusive de l'Editeur ou de ses concedants. Tous droits reserves.</p>
+
+            <h3>7.2 Contenu Utilisateur</h3>
+            <p>Vous conservez la propriete de votre Contenu Utilisateur. En l'integrant au Service, vous nous accordez une licence mondiale, non exclusive, gratuite et sous-licenciable pour utiliser ce contenu uniquement aux fins de fournir et ameliorer le Service.</p>
+
+            <h3>7.3 Signalement de Violation (DMCA)</h3>
+            <p>Si vous estimez qu'un contenu du Service viole vos droits de propriete intellectuelle, veuillez nous contacter a <a href="mailto:arodestudio@gmail.com">arodestudio@gmail.com</a> avec :</p>
+            <ul>
+                <li>Description de l'oeuvre protegee</li>
+                <li>Localisation du contenu litigieux</li>
+                <li>Vos coordonnees</li>
+                <li>Declaration de bonne foi</li>
+            </ul>
+            <p>Nous traiterons votre demande dans un delai raisonnable et retirerons le contenu si la violation est averee.</p>
+
+            <!-- MODIFICATIONS DU SERVICE -->
+            <h2>Article 8 - Modifications du Service</h2>
+            <h3>8.1 Evolution des Fonctionnalites</h3>
+            <p>Nous nous reservons le droit de modifier, suspendre ou supprimer des fonctionnalites du Service a tout moment, avec ou sans preavis. Cela inclut :</p>
+            <ul>
+                <li>Ajout de nouvelles fonctionnalites</li>
+                <li>Modification de fonctionnalites existantes</li>
+                <li>Suppression de fonctionnalites obsoletes ou peu utilisees</li>
+                <li>Changement des limites d'utilisation</li>
+            </ul>
+
+            <h3>8.2 Fonctionnalites Beta/Experimentales</h3>
+            <p>Certaines fonctionnalites peuvent etre proposees en version « Beta » ou « Experimentale ». Ces fonctionnalites :</p>
+            <ul>
+                <li>Peuvent etre instables ou incompletes</li>
+                <li>Peuvent etre modifiees ou supprimees sans preavis</li>
+                <li>Sont fournies sans garantie supplementaire</li>
+                <li>Ne donnent droit a aucune compensation en cas de suppression</li>
+            </ul>
+
+            <!-- DISPONIBILITE -->
+            <div class="card important">
+                <h2 style="margin-top: 0;">Article 9 - Disponibilite du Service</h2>
+
+                <h3>9.1 Aucune Garantie de Disponibilite</h3>
+                <p>Nous nous efforcons d'assurer une haute disponibilite, mais <strong>ne garantissons pas que le Service sera disponible 24h/24, 7j/7</strong>. Le Service peut etre interrompu pour :</p>
+                <ul>
+                    <li>Maintenance programmee ou d'urgence</li>
+                    <li>Pannes des services tiers (Firebase, Apple, fournisseurs IA)</li>
+                    <li>Problemes de reseau ou d'infrastructure</li>
+                    <li>Evenements de force majeure (voir Article 14)</li>
+                </ul>
+
+                <h3>9.2 Alarme de Secours</h3>
+                <p><strong>IMPORTANT :</strong> Ne comptez pas uniquement sur Riser pour des reveils critiques (vols, rendez-vous medicaux, examens, reunions importantes). <strong>Nous recommandons fortement de configurer une alarme de secours</strong> sur votre appareil ou un reveil physique.</p>
+
+                <h3>9.3 Absence de Responsabilite</h3>
+                <p>L'Editeur ne saurait etre tenu responsable des consequences d'un reveil manque, retarde ou non declenche, quelle qu'en soit la cause.</p>
+            </div>
+
+            <!-- ABONNEMENTS ET PAIEMENTS -->
+            <h2>Article 10 - Abonnements et Paiements</h2>
+            <h3>10.1 Offres</h3>
+            <p>Riser peut proposer des fonctionnalites gratuites et/ou des Abonnements Premium. Les prix et fonctionnalites incluses seront clairement indiques avant tout achat.</p>
+
+            <h3>10.2 Facturation</h3>
+            <ul>
+                <li>Les paiements sont traites par l'App Store d'Apple</li>
+                <li>Les abonnements se renouvellent automatiquement sauf annulation</li>
+                <li>L'annulation doit etre effectuee au moins 24h avant la fin de la periode en cours</li>
+            </ul>
+
+            <h3>10.3 Droit de Retractation</h3>
+            <p>Conformement a la reglementation europeenne, vous disposez d'un delai de 14 jours pour vous retracter d'un achat numerique, <strong>sauf si vous avez expressement consenti au debut immediat de l'execution du Service</strong> et reconnu perdre votre droit de retractation. Les achats in-app via l'App Store sont soumis a la politique de remboursement d'Apple.</p>
+
+            <h3>10.4 Changement de Prix</h3>
+            <p>Nous pouvons modifier les prix des Abonnements Premium. Vous serez informe au moins <strong>30 jours a l'avance</strong> par notification in-app ou email. Le nouveau prix s'appliquera au prochain renouvellement. Vous pouvez annuler avant cette date si vous n'acceptez pas le nouveau prix.</p>
+
+            <h3>10.5 Pas de Prorata</h3>
+            <p>Sauf disposition contraire, les abonnements annules restent actifs jusqu'a la fin de la periode payee. Aucun remboursement au prorata n'est effectue pour la periode restante.</p>
+
+            <!-- RESILIATION -->
+            <h2>Article 11 - Resiliation</h2>
+            <h3>11.1 Resiliation par l'Utilisateur</h3>
+            <p>Vous pouvez supprimer votre Compte a tout moment depuis les Reglages de l'application. La suppression entraine :</p>
+            <ul>
+                <li>Fin immediate de l'acces au Service</li>
+                <li>Suppression de votre Contenu Utilisateur sous 30 jours</li>
+                <li>Annulation des alarmes programmees</li>
+                <li>Perte des eventuels abonnements actifs (sans remboursement)</li>
+            </ul>
+
+            <h3>11.2 Resiliation par l'Editeur</h3>
+            <p>Nous pouvons suspendre ou resilier votre acces au Service, avec ou sans preavis, en cas de :</p>
+            <ul>
+                <li>Violation des presentes CGU</li>
+                <li>Activite frauduleuse ou abusive</li>
+                <li>Non-paiement (pour les services payants)</li>
+                <li>Comportement nuisible envers d'autres utilisateurs ou le Service</li>
+                <li>Demande d'une autorite competente</li>
+            </ul>
+
+            <h3>11.3 Effets de la Resiliation</h3>
+            <p>En cas de resiliation pour violation, vous perdez tout droit d'acces au Service et au Contenu IA genere. Les clauses qui par leur nature doivent survivre (propriete intellectuelle, limitation de responsabilite, etc.) restent en vigueur.</p>
+
+            <!-- COMMUNICATIONS -->
+            <h2>Article 12 - Communications</h2>
+            <h3>12.1 Notifications du Service</h3>
+            <p>En utilisant Riser, vous acceptez de recevoir des communications relatives au Service :</p>
+            <ul>
+                <li><strong>Notifications push</strong> : Alarmes, rappels (desactivables dans les reglages)</li>
+                <li><strong>Notifications in-app</strong> : Mises a jour importantes, changements de CGU</li>
+                <li><strong>Email</strong> : Communications critiques (securite, modifications majeures)</li>
+            </ul>
+
+            <h3>12.2 Communications Marketing</h3>
+            <p>Les communications marketing sont optionnelles et necessitent votre consentement explicite. Vous pouvez vous desinscrire a tout moment.</p>
+
+            <!-- LIMITATION DE RESPONSABILITE -->
+            <h2>Article 13 - Limitation de Responsabilite</h2>
+            <h3>13.1 Exclusion de Garanties</h3>
+            <p>DANS LA MESURE PERMISE PAR LA LOI APPLICABLE :</p>
+            <ul>
+                <li>LE SERVICE EST FOURNI « EN L'ETAT » ET « SELON DISPONIBILITE »</li>
+                <li>NOUS EXCLUONS TOUTE GARANTIE IMPLICITE, Y COMPRIS DE QUALITE MARCHANDE OU D'ADEQUATION A UN USAGE PARTICULIER</li>
+                <li>NOUS NE GARANTISSONS PAS QUE LE SERVICE SERA ININTERROMPU, SECURISE OU EXEMPT D'ERREURS</li>
+            </ul>
+
+            <h3>13.2 Plafond de Responsabilite</h3>
+            <p>NOTRE RESPONSABILITE TOTALE NE POURRA EXCEDER LE PLUS ELEVE DES MONTANTS SUIVANTS : (A) LES SOMMES QUE VOUS NOUS AVEZ VERSEES AU COURS DES 12 DERNIERS MOIS, OU (B) 50 EUROS.</p>
+
+            <h3>13.3 Dommages Exclus</h3>
+            <p>EN AUCUN CAS NOUS NE SERONS RESPONSABLES DES DOMMAGES INDIRECTS, ACCESSOIRES, SPECIAUX, CONSECUTIFS OU PUNITIFS, Y COMPRIS :</p>
+            <ul>
+                <li>Perte de profits, revenus ou donnees</li>
+                <li>Consequences d'un reveil manque ou retarde</li>
+                <li>Decisions prises sur la base du Contenu IA</li>
+                <li>Indisponibilite du Service</li>
+            </ul>
+
+            <h3>13.4 Exceptions</h3>
+            <p>Ces limitations ne s'appliquent pas en cas de faute lourde, dol, ou dans les cas ou la loi applicable interdit de telles limitations (notamment en matiere de dommages corporels).</p>
+
+            <!-- FORCE MAJEURE -->
+            <h2>Article 14 - Force Majeure</h2>
+            <p>Nous ne serons pas tenus responsables de tout manquement ou retard dans l'execution de nos obligations resultant d'evenements echappant a notre controle raisonnable, notamment :</p>
+            <ul>
+                <li>Catastrophes naturelles (seismes, inondations, pandemies)</li>
+                <li>Conflits armes, actes de terrorisme, emeutes</li>
+                <li>Pannes majeures d'Internet ou d'electricite</li>
+                <li>Defaillance des services tiers (Apple, Google, AWS)</li>
+                <li>Cyberattaques ou incidents de securite majeurs</li>
+                <li>Decisions gouvernementales ou reglementaires</li>
+            </ul>
+            <p>En cas de force majeure, nos obligations sont suspendues pendant la duree de l'evenement, sans responsabilite de notre part.</p>
+
+            <!-- INDEMNISATION -->
+            <h2>Article 15 - Indemnisation</h2>
+            <p>Vous acceptez de defendre, indemniser et degager de toute responsabilite l'Editeur, ses dirigeants, employes, partenaires et prestataires contre toute reclamation, dommage, perte, responsabilite et depense (y compris les <strong>frais d'avocats raisonnables</strong>) resultant de :</p>
+            <ul>
+                <li>Votre utilisation du Service</li>
+                <li>Votre violation des presentes CGU</li>
+                <li>Votre violation des droits d'un tiers</li>
+                <li>Votre Contenu Utilisateur</li>
+            </ul>
+            <p>Nous vous informerons de toute reclamation et coopererons raisonnablement a votre defense.</p>
+
+            <!-- RESOLUTION DES LITIGES -->
+            <h2>Article 16 - Resolution des Litiges</h2>
+            <h3>16.1 Droit Applicable</h3>
+            <p>Les presentes CGU sont regies par le <strong>droit francais</strong>, sans egard aux regles de conflit de lois.</p>
+
+            <h3>16.2 Resolution Amiable</h3>
+            <p>En cas de litige, vous vous engagez a nous contacter prealablement pour tenter une resolution amiable. Nous nous efforcerons de repondre sous 30 jours.</p>
+
+            <h3>16.3 Mediation</h3>
+            <p>Conformement a l'article L.612-1 du Code de la consommation, vous pouvez recourir gratuitement a un mediateur de la consommation en cas d'echec de la resolution amiable.</p>
+
+            <h3>16.4 Juridiction</h3>
+            <p>A defaut de resolution amiable ou de mediation, les tribunaux de <strong>Paris, France</strong> seront seuls competents, sauf disposition imperieuse du droit de la consommation vous accordant le benefice des tribunaux de votre domicile.</p>
+
+            <h3>16.5 Renonciation aux Actions Collectives</h3>
+            <p>Dans la mesure permise par la loi, vous acceptez de resoudre tout litige avec nous sur une base individuelle et renoncez a participer a toute action collective ou representative.</p>
+
+            <!-- LIMITATIONS GEOGRAPHIQUES -->
+            <h2>Article 17 - Limitations Geographiques</h2>
+            <p>Le Service est principalement destine aux utilisateurs residant en <strong>France et dans l'Union Europeenne</strong>. Si vous accedez au Service depuis d'autres territoires :</p>
+            <ul>
+                <li>Vous le faites de votre propre initiative</li>
+                <li>Vous etes responsable du respect des lois locales</li>
+                <li>Certaines fonctionnalites peuvent ne pas etre disponibles</li>
+                <li>La qualite du service peut varier</li>
+            </ul>
+
+            <!-- DISPOSITIONS GENERALES -->
+            <h2>Article 18 - Dispositions Generales</h2>
+            <h3>18.1 Integralite</h3>
+            <p>Les presentes CGU, avec la Politique de Confidentialite, constituent l'accord integral entre vous et l'Editeur concernant le Service.</p>
+
+            <h3>18.2 Divisibilite</h3>
+            <p>Si une disposition des presentes CGU est jugee invalide ou inapplicable, les autres dispositions restent en vigueur.</p>
+
+            <h3>18.3 Non-Renonciation</h3>
+            <p>Le fait de ne pas exercer un droit ou de ne pas exiger l'execution d'une obligation ne constitue pas une renonciation a ce droit ou a cette obligation.</p>
+
+            <h3>18.4 Cession</h3>
+            <p>Vous ne pouvez pas ceder vos droits ou obligations sans notre consentement ecrit prealable. Nous pouvons ceder les presentes CGU dans le cadre d'une fusion, acquisition ou vente d'actifs, avec notification prealable.</p>
+
+            <h3>18.5 Modifications des CGU</h3>
+            <p>Nous pouvons modifier les presentes CGU a tout moment. Les modifications significatives seront notifiees au moins <strong>30 jours a l'avance</strong> par notification in-app ou email. Votre utilisation continue du Service apres cette periode vaut acceptation des nouvelles CGU.</p>
+
+            <!-- CONTACT -->
+            <div class="card">
+                <h2 style="margin-top: 0;">Article 19 - Contact</h2>
+                <p>Pour toute question concernant les presentes CGU :</p>
+                <p><strong>Email :</strong> <a href="mailto:arodestudio@gmail.com">arodestudio@gmail.com</a></p>
+                <p><strong>Objet :</strong> [Riser - Question CGU]</p>
+                <p><strong>Delai de reponse :</strong> Nous nous efforcons de repondre sous 15 jours ouvrables.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Riser App. Tous droits reserves.</p>
+            <p><a href="terms.html">CGU</a> | <a href="privacy.html">Politique de Confidentialite</a></p>
+        </footer>
     </div>
 </body>
 </html>
